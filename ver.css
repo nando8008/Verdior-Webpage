@@ -1,0 +1,340 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Orbitron";
+}
+
+body{
+	background-image: url("versss.png");
+	background-attachment: fixed;
+	background-size: cover ; 
+}
+
+p{
+	margin-left: 1.25rem;
+	margin-right:1.25rem ;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 1.25rem;
+	text-align: justify;
+	padding-left:0.625rem;
+}
+
+pre{
+	display: inline;
+	font-family:"Lora",serif;
+    font-weight:lighter;
+	font-size: 1.5625rem;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* Splash Screen */
+
+.intro{
+	position: fixed;
+	z-index: 10;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100vh;
+	background-color: #161616;
+	transition: 1s;
+}
+
+.logo_header{
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #D9DCD6;
+    font-size: 3.125rem;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom:-1.25rem;
+    opacity: 0;
+}
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+
+}
+.logo.fade{
+    bottom: 0;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+
+
+.navbar{
+	z-index: 1;
+    height: 5rem;
+    width:100%;
+    margin:0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top:0;
+}
+
+.navbar-brand{
+    font-size: 3.4375rem;
+    margin-left: 1.875rem;
+    font-family: "Playfair Display SC",serif;
+    letter-spacing: 0.4375rem;
+	color: aliceblue;
+	-webkit-transition: color 2s linear;
+    -moz-transition: color 2s linear;
+    -o-transition: color 2s linear;
+    -ms-transition: color 2s linear;
+    transition: color 2s linear;
+}
+
+.navbar-brand:hover{
+    color: black;
+}
+
+.navbar-contactus{
+	height: 2.8125rem;
+    width: 15.625rem;
+	margin-top: 0.8rem;
+    margin-bottom: 0.0625rem;
+    font-family:"Lora",serif;
+    font-size: 1.5625rem;
+    color: black;
+	text-decoration: none;
+	-webkit-transition: background-color 2s linear, color 2s linear;
+    -moz-transition:  background-color 2s linear, color 2s linear;
+    -o-transition: background-color 2s linear, color 2s linear;
+    -ms-transition:  background-color 2s linear, color 2s linear;
+    transition:  background-color 2s linear, color 2s linear;
+
+}
+.navbar-contactus:hover{
+	color: aliceblue;
+}
+
+
+.access{
+    height: 2.8125rem;
+    width: 15.625rem;
+	margin-top: 0.8rem;
+    margin-right:1.875rem;
+    margin-bottom: 0.0625rem;
+    font-family:"Lora",serif;
+    font-weight:lighter;
+    font-size: 1.5625rem;
+    color: black;
+	-webkit-transition: background-color 2s linear, color 2s linear;
+    -moz-transition:  background-color 2s linear, color 2s linear;
+    -o-transition: background-color 2s linear, color 2s linear;
+    -ms-transition:  background-color 2s linear, color 2s linear;
+    transition:  background-color 2s linear, color 2s linear;
+}
+.access:hover{
+	color: aliceblue;
+}
+
+.main-logo{
+	width: 100%;
+	height: 18.75rem;
+	margin-top: 8.125rem;
+	display: flexbox;
+	justify-content: center;
+	text-align: center;
+	background-color: rgb(240, 248, 255,0.5);
+
+	font-family: "Playfair Display SC",serif;
+	font-size: 12.5rem;
+
+	animation-name:mainlogo-ani;
+    animation-timing-function: linear;
+    animation-timeline:view();
+    animation-range-start:31.25rem;
+    animation-range-end:cover;
+}
+
+.vision-para{
+	margin-top: 8.75rem;
+	margin-right: 1.25rem;
+	margin-left: 1.25rem;
+	border-radius: 0.9375rem 0.9375rem 0rem 0rem;
+	background-color: rgb(27, 27, 27,0.5);
+	color: rgb(154, 160, 165);
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 1.875rem;
+
+	animation-name:content-animation ;
+    animation-timing-function: linear;
+    animation-timeline:view();
+    animation-range-start:-0.625rem;
+    animation-range-end: 18.75rem;
+	animation-fill-mode: forwards
+}
+@keyframes mainlogo-ani{
+    from{
+		font-size: 1;
+		opacity: 1;}
+    to{
+        scale: .8;
+        opacity: .3;
+
+    }    
+}
+@keyframes content-animation{
+    from{
+		
+		opacity: 0;}
+    to{
+        opacity: 1;
+		background-color: rgb(27, 27, 27,1);
+    }    
+}
+
+.projbox-background{
+	background-color: rgb(27, 27, 27,1);
+	margin-right: 1.25rem;
+	margin-left: 1.25rem;
+	padding-top: 1.875rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+}
+.projbox{
+	background-color:#769287 ;
+	border-radius: 0.9375rem 0.9375rem 0rem 0rem;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+	padding-top: 0.625rem;
+	padding-bottom: 2.5rem;
+	font-size:  1.875rem;
+	font-weight: 525;
+	color: #e9f3d3;
+	font-family:"Coda",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+
+	animation: fade linear;
+	animation-timeline: view();
+	animation-range-start:0.625rem;
+    animation-range-end: 18.75rem;
+	animation-fill-mode: forwards
+
+}
+
+.project1{
+	height: 10.625rem;
+	display: flexbox;
+	flex-direction: row;
+	background-color: #e9f3d3;
+	border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+	padding-top: 0.625rem;
+	animation: fade linear;
+	animation-timeline: view();
+	animation-range-start:0.625rem;
+    animation-range-end: 18.75rem;
+	animation-fill-mode: forwards
+}
+.project1-img{
+	height:9.375rem;
+	width:100%;
+	border-radius: 0.9375rem 0.9375rem 0.9375rem 0.9375rem;
+	background-image: url("ker.jpg");
+	background-size: cover;
+	
+	color:rgb(140, 140, 140);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.project1-title{
+	height:9.375rem;
+	border-radius: 0.9375rem 0.9375rem 0.9375rem 0.9375rem;
+	padding-top: 0.625rem;
+	font-weight: bold;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.project1-content{
+	background-color: rgba(0, 0, 0, 0.5);
+	height:9.375rem;
+	border-radius: 0.9375rem 0.9375rem 0.9375rem 0.9375rem;
+	padding-top: 0.625rem;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	-webkit-transition: background-color 1s linear;
+    -moz-transition: background-color 1s linear;
+    -o-transition: background-color 1s linear;
+    -ms-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+}
+.project1-content:hover{
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+#project1-para{
+	padding-top: 0.625rem;
+	
+	padding-right: 1.25rem;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	
+	-webkit-transition: color 1s linear;
+    -moz-transition: color 1s linear;
+    -o-transition: color 1s linear;
+    -ms-transition: color 1s linear;
+    transition: color 1s linear;
+}
+a:hover{
+	color:rgb(0, 83, 0);
+}
+
+
+footer{
+	height:6.25rem;
+	background-color:rgba(60, 63, 65,0.8);
+	color:white;
+	display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+	-webkit-transition: background-color 1s linear;
+    -moz-transition: background-color 1s linear;
+    -o-transition: background-color 1s linear;
+    -ms-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+}
+footer:hover{
+	background-color: rgba(40, 42, 43, 0.9);
+}
+.footer-contactus{
+	display: inline;
+	font-size: 2.1875rem;
+	font-family:"Lora",serif;
+    font-weight:lighter;
+}
+#footer-phone{
+	
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#footer-mail{
+	
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+@keyframes fade{
+	from{
+		opacity:0;
+	}
+	to{ opacity:1 ;
+	}
+}
